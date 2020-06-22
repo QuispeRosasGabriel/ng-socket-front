@@ -9,7 +9,7 @@ export class ChatService {
 
   sendMessage(mensaje: string) {
     const paylaod = {
-      de: 'Gabriel',
+      de: this._webSocketService.getUsuario().nombre,
       cuerpo: mensaje,
     };
 
