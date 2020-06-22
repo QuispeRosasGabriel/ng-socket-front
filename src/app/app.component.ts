@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { WebsocketService } from './services/websocket.service';
+import { ChatService } from './services/chat.service';
 
 @Component({
   selector: 'app-root',
@@ -8,7 +9,14 @@ import { WebsocketService } from './services/websocket.service';
 })
 export class AppComponent implements OnInit {
   title = 'ng-socket-front';
-  constructor(public _webSocketService: WebsocketService) {}
+  constructor(
+    public _webSocketService: WebsocketService,
+    public _chatService: ChatService
+  ) {}
 
-  ngOnInit() {}
+  ngOnInit() {
+    this._chatService.getPrivateMessages().subscribe((msg) => {
+      console.log(msg);
+    });
+  }
 }

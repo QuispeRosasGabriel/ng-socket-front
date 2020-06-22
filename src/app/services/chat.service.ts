@@ -19,4 +19,8 @@ export class ChatService {
   getMessages() {
     return this._webSocketService.listen('mensaje-nuevo');
   }
+
+  getPrivateMessages() {
+    return this._webSocketService.listen('mensaje-privado');
+  }
 }
