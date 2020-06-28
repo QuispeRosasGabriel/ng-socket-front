@@ -27,4 +27,8 @@ export class ChatService {
   getUsuariosActivos() {
     return this._webSocketService.listen('usuarios-activos');
   }
+
+  emitirUsuariosActivos() {
+    this._webSocketService.emit('obtener-usuarios');
+  }
 }

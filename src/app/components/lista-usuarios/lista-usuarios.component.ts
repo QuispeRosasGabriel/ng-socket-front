@@ -14,5 +14,6 @@ export class ListaUsuariosComponent implements OnInit {
 
   ngOnInit(): void {
     this.usuariosActivosObs = this._chatService.getUsuariosActivos();
+    this._chatService.emitirUsuariosActivos();
   }
 }
