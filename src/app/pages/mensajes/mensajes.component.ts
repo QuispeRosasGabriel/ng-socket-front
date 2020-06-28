@@ -10,4 +10,8 @@ export class MensajesComponent implements OnInit {
   constructor(public _webSocketService: WebsocketService) {}
 
   ngOnInit(): void {}
+
+  salir() {
+    this._webSocketService.logoutWebSocket();
+  }
 }
