@@ -1,4 +1,5 @@
 export const environment = {
   production: true,
-  wsUrl: 'https://secret-chat-4friends.herokuapp.com/',
+  wsUrl: 'http://localhost:5000',
+  //wsUrl: 'https://secret-chat-4friends.herokuapp.com/',
 };
